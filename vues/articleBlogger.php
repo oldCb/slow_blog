@@ -7,7 +7,7 @@
 <main class="container">
 	<div>
 		<p><?= $artBlogger['titre'] ?></p>
-		<img src="'../img/img_article/<?= $artBlogger['img'] ?> " alt="image">
+		<img src="assets/img/img_article/img_<?= $artBlogger['img'] ?>" alt="image">
 		<p><?= $artBlogger['contenu']?></p>
 	</div>
 </main>
