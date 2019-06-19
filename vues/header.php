@@ -29,11 +29,13 @@
                     ?>
                 </ul>
             </div>
-            <a class= "user" href="?page=connexion">
-                <i class="fas fa-user-alt"></i>
-            </a>
+            </nav>
+            <div class="div-user">
             <?php if($_SESSION == true) { ?>
                 <div class="connect">
+                    <a class= "user" href="?page=connexion">
+                        <i class="fas fa-user-alt"></i>
+                    </a>
                     <?php if(Session::getSession('blogger') == "cici@cici.fr") { ?>
                         <a href="?page=compte">Compte admin</a>
                         <a href="controleurs/deconnexion.class.php"> / Déconnexion</a>
@@ -42,13 +44,15 @@
                         <a href="controleurs/deconnexion.class.php"> / Déconnexion</a>
                     <?php } ?>
                 </div>
-        </nav>
-        <p class="blogger">Salut <?= $b[0]['prenom'] . " "?><i class="far fa-grin-beam"></i></p>
-            <?php } else { ?>
-                <div class="connect">
-                    <a href="?page=inscription">Inscription</a>
-                    <a href="?page=connexion"> / Connexion</a>
-                </div>
-        </nav>
+                <div class="blogger">Salut <?= $b[0]['prenom'] . " "?><i class="far fa-grin-beam"></i></div>
+                    <?php } else { ?>
+                        <div class="connect">
+                        <a class= "user" href="?page=connexion">
+                        <i class="fas fa-user-alt"></i>
+                    </a>
+                            <a href="?page=inscription">Inscription</a>
+                            <a href="?page=connexion"> / Connexion</a>
+                        </div>
             <?php } ?>
+            </div>
         </header>
