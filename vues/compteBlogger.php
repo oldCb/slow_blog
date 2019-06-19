@@ -14,7 +14,6 @@
 			<th>Titre</th>
 			<th>Contenu</th>
 			<th>Catégorie</th>
-			<th>Actif</th>
 			<th></th>
 		</thead>
 		<tbody>
