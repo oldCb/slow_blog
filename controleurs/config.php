@@ -3,7 +3,7 @@
 	date_default_timezone_set('Europe/Paris');
 
 	//info site
-	$titreSite = "mon blog";
+	$titreSite = "Slow_Blog";
 	$logo = "<img class='logo' src= 'assets/img/logo.png' alt='logo' />";
 
 	// identifiant bdd
