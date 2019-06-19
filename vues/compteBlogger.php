@@ -30,9 +30,9 @@
 					<div class="modal" id="divModal<?= ($valeurArt['a_id']) ?>">
 						<div class="mBox">
 							<p>Voulez-vous supprimer cet article ?</p>
-							<p>Titre: <?= $valeurArt['titre'] ?> </p>
-							<button id="close" class="closeBtn" close-modal="divModal<?= ($valeurArt['a_id']) ?>">Annuler</button>
-							<button><a href="?page=compte&action=sup&id=<?= intval($valeurArt['a_id']) ?>">Supprimer</a></button>
+							<h2><?= $valeurArt['titre'] ?></h2>
+							<button id="close" class="closeBtn btn-annule" close-modal="divModal<?= ($valeurArt['a_id']) ?>">Annuler</button>
+							<button class="btn-valide"><a href="?page=compte&action=sup&id=<?= intval($valeurArt['a_id']) ?>">Supprimer</a></button>
 						</div>
 					</div>
 				</td>

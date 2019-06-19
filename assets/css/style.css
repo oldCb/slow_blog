@@ -12,6 +12,7 @@ body {
 a, a:hover, a:visited {
     color: #4d4b4b;
     font-variant: small-caps;
+    text-decoration: none;
 }
 
 h2 {
@@ -155,14 +156,29 @@ h1 {
 /* ----------- PAGE COMPTE BLOGGER ------------- */
 
 #pageBlogger h2 {
-	text-align: center;
+    text-align: center;
+    margin-top: 30px;
 }
 
 #pageBlogger button {
-	margin-top: 50px;
-	padding: 10px;
-	border-radius: 10px;
+	margin-top: 40px;
+	padding: 10px 15px;
+    border-radius: 5px;
+    font-variant: small-caps;
+    cursor: pointer;
 }
+
+#pageBlogger .btn-annule {
+    background-color: #f84039;
+    border: none;
+    margin-right: 50px;
+}
+
+#pageBlogger .btn-valide {
+    background-color: #56d48b;
+    border: none;
+}
+
 
 #pageBlogger .tab{
 	width: 1100px;
@@ -184,7 +200,7 @@ h1 {
 	padding: 20px;
 }
 
-#pageBlogger .tab td a {
+#pageBlogger .tab td i {
 	padding-left: 15px;
 }
 
@@ -211,17 +227,18 @@ h1 {
 }
 
 #pageBlogger .mbox {
-	border: 1px solid #1a1919;
-    background-color: #f4f4f4;
+	border: 1px solid #575656;
+    background-color: #fff;
+    border-radius: 5px;
     margin: 55px auto;
-	padding-top: 20px;
-	padding-bottom: 6px;
-    width: 30%;
+	padding: 20px;
+    width: 40%;
     box-shadow: 0px 0px 30px 1px rgba(0 ,0 , 0, 0.3);
     animation-name: animModal;
     animation-duration: 1s;
     position: relative;
 }
+
 
 @keyframes animModal{
     from{
