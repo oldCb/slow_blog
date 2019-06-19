@@ -308,7 +308,7 @@ h1 {
         font-size: 1rem;
     }
 
-    .form-connect, .form-inscription {
+    .form-connect, .form-inscription, .form-art {
         padding: 0 15px;
     }
 
@@ -351,9 +351,7 @@ h1 {
         margin-bottom: 20px;
     }
 
-    .form-art {
-        padding: 0 15px;
-    }
+    
 
     .art_blogger img {
         width: 55%;
