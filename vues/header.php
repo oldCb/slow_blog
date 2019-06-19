@@ -10,7 +10,7 @@
        <title><?= $titreSite ?></title>
         <link rel="stylesheet" href="assets/css/bootstrap.css" >
         <script src="assets/js/jquery-3.3.1.min.js"></script>
-        <script src="assets/js/boottstrap/bootstrap.min.js"></script>
+        <script src="assets/js/bootstrap/bootstrap.min.js"></script>
         <link rel="stylesheet" type="text/css" href="assets/fonts/fontawesome-free-5.5.0-web/css/all.css">
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     </head>
@@ -43,6 +43,7 @@
                     <?php } ?>
                 </div>
         </nav>
+        <p class="blogger">Salut <?= $b[0]['prenom'] . " "?><i class="far fa-grin-beam"></i></p>
             <?php } else { ?>
                 <div class="connect">
                     <a href="?page=inscription">Inscription</a>
@@ -50,5 +51,4 @@
                 </div>
         </nav>
             <?php } ?>
-        <p class="blogger">Salut <?= $b[0]['prenom'] . " "?><i class="far fa-grin-beam"></i></p>
         </header>

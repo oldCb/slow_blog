@@ -33,11 +33,12 @@ class AddArticle {
 
 		$exploded = explode('.', $_FILES['fichier']['name']);
 		$extension = end($exploded);
-		$uploadFile = $uploadDir . basename(microtime() . '.' . $extension);
-		$this->img = basename(microtime() . '.' . $extension);
+		$uploadFile = $uploadDir . basename(time() . '.' . $extension);
+		$this->img = basename(time() . '.' . $extension);
 
 		$fichiersExtensions = array('jpg', 'jpeg', 'png');
 		$fichiersTypes = array('image/jpeg', 'image/jpg', 'image/png');
+		var_dump( $_FILES['fichier']);
 
 		if(in_array($extension, $fichiersExtensions)){
 
