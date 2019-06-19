@@ -68,7 +68,7 @@ class ArticlesModel {
         $this->requete = $pdo->prepare("INSERT INTO `articles`(`titre`, `contenu`, `img`, `actif`, `id_user`, `id_cat`) 
                                         VALUES (:titre,
                                                 :contenu,
-                                                'image',
+                                                :img,
                                                 1,
                                                 :id_user,
                                                 :id_cat)
@@ -76,6 +76,7 @@ class ArticlesModel {
 
         $this->requete->bindParam(':titre', $_POST['titre']);
         $this->requete->bindParam(':contenu', $_POST['contenu']);
+        $this->requete->bindParam(':img', $_POST['fichier']);
         $this->requete->bindParam(':id_user', $idB);
         $this->requete->bindParam(':id_cat', $_POST['cat']);
 

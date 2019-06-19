@@ -28,7 +28,7 @@
 		</fieldset>
 	</form>
 	<?php } else { ?>
-	<form method="POST" action="controleurs/addArticle.class.php">
+	<form method="POST" action="controleurs/addArticle.class.php" enctype="multipart/form-data">
 		<fieldset>
 			<legend>Ajoute un nouvel article</legend>
 			<div>
@@ -40,9 +40,13 @@
 					<textarea rows="7" cols="90" name="contenu"></textarea>
 			</div>
 			<div>
+				<label for="contenu">Photo :</label>
+					<input type="file" name="fichier" id="fichier" />
+			</div>
+			<div>
 				<label for="cat">Catégorie :</label>
 					<select name="cat">
-						<option></option>
+						<option selected="true" disabled>Choisis la catégorie</option>
 						<?php foreach ($cat as $value) : ?>
 							<option value="<?= $value['c_id'] ?>"><?= $value['nom_cat'] ?></option>
 						<?php endforeach ?>
