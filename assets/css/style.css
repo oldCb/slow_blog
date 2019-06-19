@@ -30,6 +30,10 @@ div {
     word-wrap: break-word;
 }
 
+textarea {
+    resize: none;
+}
+
 
 /* ------------ HEADER/NAV ------------- */
 
@@ -255,27 +259,17 @@ h1 {
         top: 0px;
     }
 }
-/* ----------- AJOUT ARTICLE ----------- */
+/* ----------- PAGE AJOUT/MODIF ARTICLE ----------- */
 
-#addArt form {
+.form-art {
     margin-top: 30px;
     margin-bottom: 150px;
+    padding: 0 115px;
 }
 
-#addArt form legend {
-	padding-left: 10px;
-	padding-right: 10px;
-	font-size: 2rem;
-}
-
-#addArt form div {
-	margin-top: 20px;
-	margin-right: 20px;
-	margin-left: 20px;
-}
-
-#addArt form div:last-child {
-	text-align: right;
+.form-art h2 {
+    margin-top: 50px;
+    margin-bottom: 30px;
 }
 
 
