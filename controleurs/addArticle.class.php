@@ -26,15 +26,15 @@ class AddArticle {
     	$this->titre = $_POST['titre'];
     	$this->contenu = $_POST['contenu'];
 		$this->cat = $_POST['cat'];
-		$this->img = $_FILES['fichier']['name'];
 		
 		// verif fichier img
 
-		$uploadDir = '../assets/img/img_article';
+		$uploadDir = '../assets/img/img_article/img_';
 
-		$exploded = explode('.', $this->img);
+		$exploded = explode('.', $_FILES['fichier']['name']);
 		$extension = end($exploded);
-		$uploadFile = $uploadDir . basename( 'sss.'.$extension);
+		$uploadFile = $uploadDir . basename(microtime() . '.' . $extension);
+		$this->img = basename(microtime() . '.' . $extension);
 
 		$fichiersExtensions = array('jpg', 'jpeg', 'png');
 		$fichiersTypes = array('image/jpeg', 'image/jpg', 'image/png');
@@ -45,28 +45,25 @@ class AddArticle {
 
 				if(move_uploaded_file($_FILES['fichier']['tmp_name'], $uploadFile)) {
 					var_dump('fichier accepté');
+
+					if(!empty($this->titre) && !empty($this->contenu) && !empty($this->cat) && !empty($this->img)) {
+
+						require "../models/articles.model.php";
+						$this->article = new ArticlesModel();
+						$this->result = $this->article->addArticleBlogger($pdo, $this->titre,$this->contenu,$this->cat,$this->img);
+			
+					}
+
+					return $this->result;
 				}
 				else {
-					var_dump('fichie non accepté');
+					var_dump('fichier non accepté');
 				}
 			}
 			else {
 				var_dump('fichier non accepté');
 			}
-		}
-
-
-		// verif champ form
-
-        if(!empty($this->titre) && !empty($this->contenu) && !empty($this->cat) && !empty($this->img)) {
-
-        	require "../models/articles.model.php";
-            $this->article = new ArticlesModel();
-            $this->result = $this->article->addArticleBlogger($pdo);
-
-        }
-
-        return $this->result;
+		}    
         
 	}
 	

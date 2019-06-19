@@ -23,7 +23,6 @@
 				<td><?= $valeurArt['titre'] ?></td>
 				<td><?= substr($valeurArt['contenu'], 0,10) . ' ...' ?></td>
 				<td><?= $valeurArt['nom_cat'] ?></td>
-				<td><?= $valeurArt['active'] ?></td>
 				<td>
 					<a href="?page=artBlogger&id=<?= intval($valeurArt['a_id']) ?>"><i class="fas fa-eye"></i></a>
 					<a href="?page=addArt&id=<?= intval($valeurArt['a_id']) ?>"><i class="fas fa-edit"></i></a>

@@ -54,7 +54,9 @@ class ArticlesModel {
     }
 
 
-    public function addArticleBlogger($pdo){
+    public function addArticleBlogger($pdo, $titre, $contenu, $cat, $img){
+
+        var_dump($titre,$contenu,$cat,$img);
 
         /* récup email session en cours pour enregistrer l'id du blogger lors de l'ajout d"un article */
 
@@ -74,11 +76,11 @@ class ArticlesModel {
                                                 :id_cat)
                                         ");
 
-        $this->requete->bindParam(':titre', $_POST['titre']);
-        $this->requete->bindParam(':contenu', $_POST['contenu']);
-        $this->requete->bindParam(':img', $_POST['fichier']);
+        $this->requete->bindParam(':titre', $titre);
+        $this->requete->bindParam(':contenu', $contenu);
+        $this->requete->bindParam(':img', $img);
         $this->requete->bindParam(':id_user', $idB);
-        $this->requete->bindParam(':id_cat', $_POST['cat']);
+        $this->requete->bindParam(':id_cat', $cat);
 
         $this->requete->execute();
 
