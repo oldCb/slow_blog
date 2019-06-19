@@ -4,5 +4,7 @@
     $cat = $categorie->controleCategorie($pdo);
 ?>
 <main class="container">
-	<?= $cat ?>
+    <div class="flex">
+        <?= $cat ?>
+    </div>
 </main>

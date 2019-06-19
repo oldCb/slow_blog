@@ -14,12 +14,15 @@ class CategoriesModel {
         $this->result = '';
         
 		while ($row = $this->cat->fetch()) {
-			$this->result.= '
-			<a href="?page=article&article='.$row['a_id'].'"><h2>'.$row['titre'].'</h2></a>
-			<div> '.substr($row['contenu'],0, 20).' ...</div>	<br>
-			';
+            $this->result.= '
+            <div class="art_cat">
+                <a href="?page=article&article='.$row['a_id'].'">
+                    <h2>'.$row['titre'].'</h2>
+                </a>
+                <p> '.substr($row['contenu'],0, 100).' ...</p>
+            </div>';
 		}
-        
+
         return $this->result;
         
     }

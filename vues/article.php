@@ -5,5 +5,5 @@
 ?>
 
 <main class="container">
-	<?= $art ?>
+	<?= $art ?> 
 </main>

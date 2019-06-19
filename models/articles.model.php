@@ -14,9 +14,10 @@ class ArticlesModel {
         $this->result = '';
         
         while ($row = $this->article->fetch()) {
-			$this->result.= '
-			<a href="article='.$row['a_id'].'"><h2>'.$row['titre'].'</h2></a>'
-            . '<div> '.$row['contenu'].'</div><br>';
+            $this->result.= '
+            <a href="article='.$row['a_id'].'"><h2>'.$row['titre'].'</h2>
+            </a>'
+            . '<p> '.$row['contenu'].'</p>';
 		}
         
         return $this->result;
