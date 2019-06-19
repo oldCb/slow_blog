@@ -300,13 +300,32 @@ h1 {
 
 /* --------------- MEDIA QUERIES ------------------- */
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 950px) {
     .logo{
         width: 100%;
     }
     .fa-user-alt {
         font-size: 1rem;
     }
+
+    .form-connect, .form-inscription {
+        padding: 0 15px;
+    }
+
+    #pageBlogger .mbox {
+        width: 70%;
+    }
+
+    #pageBlogger .btn-annule {
+        margin-right: 0;
+    }
+
+    #pageBlogger .tab td i {
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 500px) {
     .div-user {
         flex-direction: column;
         padding: 0 10px;
@@ -340,7 +359,11 @@ h1 {
         width: 55%;
     }
 
-    .mbox {
+    #pageBlogger .mbox {
         width: 85%;
+    }
+
+    #pageBlogger .tab td i {
+        padding: 5px 0;
     }
 }
