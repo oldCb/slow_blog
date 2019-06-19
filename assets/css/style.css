@@ -20,6 +20,11 @@ h2 {
     text-align: center;
 }
 
+.btn-validation {
+    border: none;
+    padding: 10px;
+}
+
 
 /* ------------ HEADER/NAV ------------- */
 
@@ -125,17 +130,19 @@ h1 {
 
 /* ----------- PAGE INSCRIPTION/CONNEXION ------------- */
 
-.form {
+.form-connect, .form-inscription {
     margin-top: 90px;
     padding: 0px 300px;
 }
 
-.form h2 {
-/*     text-align: center;
-    font-variant: small-caps; */
+.form-connect h2, .form-inscription h2 {
     margin-bottom: 30px;
 }
 
+.form-btn {
+    text-align: right;
+    margin-top: 50px;
+}
 
 
 /* ----------- PAGE COMPTE BLOGGER ------------- */

@@ -111,6 +111,14 @@ class ArticlesModel {
         header("Location: ../?page=compte");
 
     }
+
+    public function lastArticle($pdo) {
+
+        $this->requete = $pdo->prepare('SELECT * FROM `articles` ORDER BY a_id DESC LIMIT 3');
+
+        $this->requete->fetch();
+        return $this->result;
+    }
     
 }
 
