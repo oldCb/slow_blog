@@ -7,7 +7,8 @@
 <!DOCTYPE>
    <html>
     <head>
-       <title><?= $titreSite ?></title>
+        <title><?= $titreSite ?></title>
+        <link rel="icon" type="image/png" href="assets/img/logo-ico.png" />
         <link rel="stylesheet" href="assets/css/bootstrap.css" >
         <script src="assets/js/jquery-3.3.1.min.js"></script>
         <script src="assets/js/bootstrap/bootstrap.min.js"></script>
