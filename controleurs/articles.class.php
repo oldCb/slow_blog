@@ -49,6 +49,15 @@ class Articles {
         }
 
     }
+
+    public function controlLastArticles($pdo) {
+
+        //if (isset($_GET['page'])){
+            $this->article = new ArticlesModel();
+            $this->result = $this->article->lastArticle($pdo);
+        //}
+        return $this->result;
+    }
 }
 
 ?>

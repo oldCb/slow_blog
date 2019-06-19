@@ -19,7 +19,7 @@ class CategoriesModel {
                 <a href="?page=artBlogger&id='.$row['a_id'].'">
                     <h2>'.$row['titre'].'</h2>
                 </a>
-                <p> '.substr($row['contenu'],0, 50).' ...</p>
+                <p> '.substr($row['contenu'],0, 20).' ...</p>
             </div>';
 		}
 
