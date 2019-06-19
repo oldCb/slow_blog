@@ -16,10 +16,10 @@ class CategoriesModel {
 		while ($row = $this->cat->fetch()) {
             $this->result.= '
             <div class="art_cat">
-                <a href="?page=article&article='.$row['a_id'].'">
+                <a href="?page=artBlogger&id='.$row['a_id'].'">
                     <h2>'.$row['titre'].'</h2>
                 </a>
-                <p> '.substr($row['contenu'],0, 100).' ...</p>
+                <p> '.substr($row['contenu'],0, 50).' ...</p>
             </div>';
 		}
 

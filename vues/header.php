@@ -42,7 +42,6 @@
                         <a href="controleurs/deconnexion.class.php"> / Déconnexion</a>
                     <?php } ?>
                 </div>
-            <p class="blogger">Salut <?= $b[0]['prenom'] . " "?><i class="far fa-grin-beam"></i></p>
         </nav>
             <?php } else { ?>
                 <div class="connect">
@@ -51,4 +50,5 @@
                 </div>
         </nav>
             <?php } ?>
+        <p class="blogger">Salut <?= $b[0]['prenom'] . " "?><i class="far fa-grin-beam"></i></p>
         </header>

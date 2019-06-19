@@ -5,8 +5,8 @@
 ?>
 
 <main class="container">
-	<div>
-		<p><?= $artBlogger['titre'] ?></p>
+	<div class="art_blogger">
+		<h2><?= $artBlogger['titre'] ?></h2>
 		<img src="assets/img/img_article/img_<?= $artBlogger['img'] ?>" alt="image">
 		<p><?= $artBlogger['contenu']?></p>
 	</div>
