@@ -166,6 +166,7 @@ h1 {
     border-radius: 5px;
     font-variant: small-caps;
     cursor: pointer;
+    background-color: #f3f3f3;
 }
 
 #pageBlogger .btn-annule {
