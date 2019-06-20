@@ -9,6 +9,8 @@
     <head>
         <title><?= $titreSite ?></title>
         <link rel="icon" type="image/png" href="assets/img/logo-ico.png" />
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="assets/css/bootstrap.css" >
         <script src="assets/js/jquery-3.3.1.min.js"></script>
         <script src="assets/js/bootstrap/bootstrap.min.js"></script>
