@@ -26,6 +26,15 @@ class Categories {
 
     	return $this->result;
     }
+
+    public function controlePagination($pdo){
+        if(isset($_GET['page'])){
+            $this->categorie = new CategoriesModel();
+            $this->result = $this->categorie->getPagination($pdo);
+        }
+
+        return $this->result;
+    }
     
 }
 
