@@ -154,7 +154,7 @@ h1 {
 /* ----------- PAGE INSCRIPTION/CONNEXION ------------- */
 
 .form-connect, .form-inscription {
-    margin-top: 90px;
+    margin-top: 90px 0px 150px;;
     padding: 0px 300px;
 }
 

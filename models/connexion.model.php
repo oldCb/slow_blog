@@ -8,7 +8,7 @@ Class ConnexionModel {
 	public function seConnecter($pdo){
 
 		$this->cnx = $pdo->prepare("SELECT * FROM users WHERE email = ? AND mdp = ?");
-		$this->cnx->execute(array($_POST["email"], md5($_POST["mdp"])));
+		$this->cnx->execute(array($_POST["email"], md5($_POST["mdp"]).'1f2ezger3587'));
 
 		$this->result = $this->cnx->fetchAll();
 
