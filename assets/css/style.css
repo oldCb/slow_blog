@@ -113,19 +113,28 @@ h1 {
     padding: 50px 0;
     margin: 80px 0 140px;
     flex-wrap: wrap;
-    text-align: center;
 }
 
 .art {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0px 0px 10px 0px rgb(201, 201, 201);
-    height: 160px;
     width: 30%;
+    margin-bottom: 20px;
 }
 
 .art h2 {
     margin-bottom: 30px;
+}
+
+.art-img {
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+.art-img-style {
+    width: 100%;
+    border-radius: 3px;
 }
 
 
@@ -138,19 +147,6 @@ h1 {
     justify-content: space-around;
     margin: 50px 0px 120px;
 }
-.art_cat {
-    width: 30%;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px 0px rgb(201, 201, 201);
-    height: 150px;
-    margin-bottom: 25px;
-}
-
-.art_cat h2 {
-    margin-bottom: 30px;
-}
-
 
 
 /* ----------- PAGE INSCRIPTION/CONNEXION ------------- */
@@ -326,6 +322,10 @@ h1 {
 
     #pageBlogger .tab td i {
         padding: 5px;
+    }
+
+    .art {
+        width: 45%;
     }
 }
 

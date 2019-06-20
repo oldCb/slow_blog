@@ -15,11 +15,14 @@ class CategoriesModel {
         
 		while ($row = $this->cat->fetch()) {
             $this->result.= '
-            <div class="art_cat">
+            <div class="art">
+                <div class="art-img">
+                    <img class="art-img-style" src="assets/img/img_article/img_'.$row['img'].'"/>
+                </div>
                 <a href="?page=artBlogger&id='.$row['a_id'].'">
                     <h2>'.$row['titre'].'</h2>
                 </a>
-                <p> '.substr($row['contenu'],0, 20).' ...</p>
+                <p> '.substr($row['contenu'],0, 15).' ...</p>
             </div>';
 		}
 
@@ -32,17 +35,6 @@ class CategoriesModel {
         $this->result = $this->cat->fetchAll();
         return $this->result;
     }
-
-
-    // public function getIdCategorie($pdo){
-
-    //     $this->cat = $pdo->prepare("SELECT c_id FROM `categories` WHERE nom_cat = ? ");
-    //     $this->cat->execute(array($idCat));
-
-    //     $this->result = $this->cat->fetchAll();
-
-    //     return $this->result;
-    // }
     
 }
 
