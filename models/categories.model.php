@@ -32,8 +32,10 @@ class CategoriesModel {
     }
 
     public function listeCategories($pdo){
+
         $this->cat = $pdo->query("SELECT * FROM categories");
         $this->result = $this->cat->fetchAll();
+        
         return $this->result;
     }
 
