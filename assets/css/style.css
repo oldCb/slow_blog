@@ -154,7 +154,7 @@ h1 {
 /* ----------- PAGE INSCRIPTION/CONNEXION ------------- */
 
 .form-connect, .form-inscription {
-    margin-top: 90px 0px 150px;;
+    margin: 90px 0px 150px;;
     padding: 0px 300px;
 }
 
@@ -302,7 +302,13 @@ h1 {
 
 /* --------------- MEDIA QUERIES ------------------- */
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1000px) {
+    .form-connect, .form-inscription, .form-art {
+        padding: 0 100px;
+    }
+}
+
+@media screen and (max-width: 900px) {
     .logo{
         width: 100%;
     }
@@ -311,7 +317,7 @@ h1 {
     }
 
     .form-connect, .form-inscription, .form-art {
-        padding: 0 15px;
+        padding: 0 50px;
     }
 
     #pageBlogger .mbox {
@@ -328,6 +334,13 @@ h1 {
 
     .art {
         width: 45%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+
+    .form-connect, .form-inscription, .form-art {
+        padding: 0 15px;
     }
 }
 
