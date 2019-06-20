@@ -25,9 +25,5 @@ class bddAccess {
         return $pdo;
         
     }
-    
 }
-
-
- 
 ?>

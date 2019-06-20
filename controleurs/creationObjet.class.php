@@ -29,6 +29,11 @@ class CreationObjet {
 		$this->creation->modifArticle($pdo);
 	}
 
+	public function creationObjetDeleteArticle($pdo){
+		$this->creation = new DeleteArticle();
+		$this->creation->removeArticle($pdo);
+	}
+
 }
 
 ?>

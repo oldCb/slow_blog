@@ -36,9 +36,7 @@ class Inscription {
         return $this->result;
        		
 	}
-			
 }
-
 
 ?>
         

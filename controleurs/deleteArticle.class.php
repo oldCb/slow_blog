@@ -11,7 +11,7 @@ $creation = new CreationObjet();
 $crea = $creation->creationObjetArticle($pdo);
 
 
-class AddArticle {
+class DeleteArticle {
 
 	private $article;
 	private $result;
