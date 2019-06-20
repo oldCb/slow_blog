@@ -4,6 +4,8 @@ class Blogger {
 
 	private $blogger;
 	private $result;
+	private $user;
+	private $delete;
 
 	public function getAllBloggers($pdo){
 
@@ -39,6 +41,30 @@ class Blogger {
 		$this->result = $this->blogger->fetchAll();
 
 		return $this->result;
+
+	}
+
+	public function deleteBlogger($pdo) {
+
+		Session::startSession();
+		$email = Session::getSession('blogger');
+
+		/* requete suppression articles d'un blogger ok sur mysql */
+		$this->blogger = $pdo->prepare("DELETE FROM articles WHERE articles.id_user IN (SELECT users.u_id FROM users WHERE users.email = ?)");
+		$this->blogger->execute(array($email));
+
+		$this->result = $this->blogger->fetchAll();
+
+		/* requete suppresion blogger ok sur mysql */
+
+		$this->user = $pdo->prepare("DELETE FROM users WHERE users.email = ? ");
+		$this->user->execute(array($email));
+
+		$this->delete = $this->user->fetchAll();
+
+		$remove = [$this->result, $this->delete];
+
+		return $remove;
 
 	}
 

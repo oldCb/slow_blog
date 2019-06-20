@@ -14,6 +14,14 @@ class Bloggers {
         }
         return $this->result;
     }
+
+    public function controleUser($pdo){
+        if ($_SESSION) {
+            $this->blogger = new Blogger();
+            $this->result = $this->blogger->deleteBlogger($pdo);
+        }
+        return $this->result;
+    }
 }
 
 ?>

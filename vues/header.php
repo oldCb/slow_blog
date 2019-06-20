@@ -2,6 +2,7 @@
     include "controleurs/bloggers.class.php";
     $blogger = new Bloggers();
     $b = $blogger->controleBlogger($pdo);
+    $user = $blogger->controleUser($pdo);
 ?>
 
 <!DOCTYPE>
@@ -44,6 +45,9 @@
                         <a href="?page=compte">Mon Compte</a>
                         <a href="controleurs/deconnexion.class.php"> / Déconnexion</a>
                     <?php } ?>
+                </div>
+                <div>
+                    <button>Supprimer compte</button>
                 </div>
                 <div class="blogger">Salut <?= $b[0]['prenom'] . " "?><i class="far fa-grin-beam"></i></div>
                     <?php } else { ?>
